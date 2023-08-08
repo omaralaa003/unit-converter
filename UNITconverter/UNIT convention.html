@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+
+<h1 style="color:black;text-align:center;">unit conversion</h1>
+  <h3><a href="home.html">home</a><br></h3>
+class Convert{
+From:<select name="" id="inputUnit">
+			<option value="Bit">Bit</option>
+			<option value="Byte">Byte</option>
+			<option value="KB">KB</option>
+			<option value="MB">MB</option>
+			<option value="GB">GB</option>
+		</select>
+		To:<select name="" id="outputUnit">
+			<option value="Bit">Bit</option>
+			<option value="Byte">Byte</option>
+			<option value="KB">KB</option>
+			<option value="MB">MB</option>
+			<option value="GB">GB</option>
+		</select><br>
+        Number:<input type="text"  id="inputValue"><br>
+<button onclick="myFunction()">Convert</button>
+  }
+
+<p id="con"></p>
+
+<script>
+
+function myFunction() 
+{	
+	var inputValue1 = document.getElementById("inputValue");
+ 	var inputUnit1 = document.getElementById("inputUnit");
+ 	var outputUnit1 = document.getElementById("outputUnit");
+    
+    var inputValue = inputValue1.value;
+ 	var inputUnit = inputUnit1.value;
+ 	var outputUnit = outputUnit1.value;
+    
+ 	var outputValue = 0;
+ 	var bytes = 0;
+    
+ 	    switch (inputUnit) {
+      case "Bit":
+        bytes = inputValue / 8;
+        break;
+      case "Byte":
+        bytes = inputValue;
+        break;
+      case "KB":
+        bytes = inputValue * 1024;
+        break;
+      case "MB":
+        bytes = inputValue * 1024 * 1024;
+        break;
+      case "GB":
+        bytes = inputValue * 1024 * 1024 * 1024;
+        break;
+    }
+
+		switch (outputUnit) {
+      case "Bit":
+        outputValue = bytes * 8;
+        break;
+      case "Byte":
+        outputValue = bytes;
+        break;
+      case "KB":
+        outputValue = bytes / 1024;
+        break;
+      case "MB":
+        outputValue = bytes / 1024 / 1024;
+        break;
+      case "GB":
+        outputValue = bytes / 1024 / 1024 / 1024;
+        break;
+    }
+  document.getElementById("con").innerHTML = outputValue;
+}
+</script>
+
+</body>
+</html>

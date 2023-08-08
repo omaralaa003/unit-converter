@@ -1,0 +1,44 @@
+h2 {
+	background-color: ;
+}
+body{
+
+	background-image: url(https://img.freepik.com/free-photo/white-concrete-wall_53876-92803.jpg?w=900&t=st=1682012790~exp=1682013390~hmac=0ffcb78ead103940480e0e6cfdf976ac61ed7185be889d8a31f7dce0b4f279c3);
+	background-size: cover ;
+}
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.body{
+	font-family: "work-Sans","sans-serif;";
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+li {
+    float: left;
+}
+li {     
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: auto ;
+	margin: auto;
+	background-color: white;
+}
+.logo{
+	
+	margin-right:2px;
+}
